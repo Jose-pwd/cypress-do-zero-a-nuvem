@@ -5,14 +5,14 @@
 }
 
 #title {
-    color: #fec7d7;
+    color: #000000;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 #subtitle {
-    color: #fec7d7;
+    color: #000000;
     text-align: center;
 }
 
@@ -21,9 +21,9 @@ fieldset {
 }
 
 body {
-    background-color: #181818;
+    background-color: #ffffff;
     font-size: 1em;
-    color: #272343;
+    color: #000000;
     justify-content: center;
     margin: auto;
     display: grid;
@@ -39,7 +39,7 @@ input, select, textarea, button {
 
 .field label {
     margin-bottom: 0.2em;
-    color: #272343;
+    color: #000000;
     display: block;
 }
 
@@ -54,7 +54,7 @@ fieldset.group .field {
 
 .field input[type="text"], .field input[type="email"], .field input[type="number"], .field select, .field textarea {
     padding: 0.2em;
-    border: 1px solid #272343;
+    border: 1px solid #000000;
     box-shadow: 2px 2px 2px #181818;
     display: block;
 }
@@ -69,19 +69,19 @@ textarea {
 }
 
 .field input:focus, .field select:focus, .field textarea:focus {
-    background-color: #fec7d7;
+    background-color: #ffffff;
 }
 
 .button {
     font-size: 1.2em;
-    background: #0e172c;
-    border: #181818 solid 2px;
+    background: #080808;
+    border: #000000 solid 2px;
     color: #fffffe;
-    padding: 0.8em 1.2em;
+    padding: 0.9em 1.5em;
     font-weight: bold;
     margin: auto;
     display: block;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .button:hover {
@@ -104,7 +104,7 @@ textarea {
 }
 
 #white-background {
-    background:#fec7d7;
+    background:#90cde9;
     display: inline-block;
     padding: 20px;
     border-radius: 10px;
@@ -132,7 +132,7 @@ input[type="radio"] {
 }
 
 .required-mark {
-    color: #2e2e2e;
+    color: #000000;
     font-size: 0.9em;
 }
 
