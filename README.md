@@ -1,28 +1,109 @@
-# 🌲 Cypress, do Zero à Nuvem ☁️
+# Cypress, do Zero a Nuvem
 
-👋 Seja bem-vindo(a)!
+Repositorio do curso **Cypress, do Zero a Nuvem**, da Escola Talking About Testing.
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai amar esse curso. ❤️
+Este projeto foi organizado para ser simples de executar e servir como base de estudos de testes E2E com Cypress, incluindo execucao local, simulacao mobile e integracao com CI/Cypress Cloud.
 
-## O que você vai aprender?
+## O que voce vai praticar
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar upload de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
-- Como executar os testes em um _workflow_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como integrar seu _workflow_ de integração contínua com o Cypress Cloud (o serviço de gestão de testes do Cypress na nuvem)
+- Configuracao de projeto Cypress do zero
+- Interacao com elementos comuns de aplicacoes web
+- Upload de arquivos
+- Validacoes de comportamento e conteudo
+- Criacao de comandos customizados
+- Testes de links que abririam em nova aba
+- Simulacao de viewport mobile
+- Execucao em pipeline de integracao continua
+- Integracao com Cypress Cloud
 
-## Vamos começar?
+## Pre-requisitos
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+- Node.js 18+ (recomendado LTS)
+- npm 9+
+- Git
 
-___
+## Instalacao
 
-Este é um curso da **Escola Talking About Testing**.
+```bash
+npm install
+```
+
+## Comandos principais
+
+### Abrir Cypress (modo interativo)
+
+```bash
+npm run cy:open
+```
+
+### Abrir Cypress com viewport mobile (410x860)
+
+```bash
+npm run cy:open:mobile
+```
+
+### Rodar testes em modo headless
+
+```bash
+npm test
+```
+
+### Rodar testes em modo headless com viewport mobile (410x860)
+
+```bash
+npm run test:mobile
+```
+
+## Comandos uteis do dia a dia
+
+### Rodar um spec especifico
+
+```bash
+npx cypress run --spec "cypress/e2e/CAC-TAT.cy.js"
+```
+
+### Rodar com browser especifico
+
+```bash
+npx cypress run --browser chrome
+```
+
+### Abrir um spec especifico na interface
+
+```bash
+npx cypress open --e2e --config specPattern=cypress/e2e/privacyPolicy.cy.js
+```
+
+## Estrutura principal
+
+```text
+cypress/
+  e2e/         # specs de teste
+  fixtures/    # massa de dados
+  support/     # comandos customizados e configuracoes globais
+src/           # aplicacao alvo usada nos exercicios
+lessons/       # conteudo e roteiro do curso
+cypress.config.js
+```
+
+## Configuracao atual de viewport (desktop)
+
+No `cypress.config.js`, o projeto usa por padrao:
+
+- `viewportWidth: 1280`
+- `viewportHeight: 880`
+
+## Roteiro do curso
+
+- Estrutura do curso: [lessons/_course-structure_.md](./lessons/_course-structure_.md)
+- Pre-requisitos detalhados: [lessons/_pre-requisites_.md](./lessons/_pre-requisites_.md)
+- Sobre a aplicacao alvo: [lessons/_the-app_.md](./lessons/_the-app_.md)
+
+## Observacoes
+
+- Os comandos `cy:open:mobile` e `test:mobile` sobrescrevem somente viewport para simular dispositivo movel.
+- Se quiser evoluir este repositorio para uso profissional, o proximo passo natural e separar suites por tags, adicionar relatorios e publicar resultados no CI.
+
+---
+
+Curso da **Escola Talking About Testing**.
